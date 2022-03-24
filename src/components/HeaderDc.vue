@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header container">
-      <img src="../assets/img/dc-logo.png" alt="">
+      <img src="../assets/img/dc-logo.png" alt="logo DC">
       <ul>
         <li v-for="(link, index)  in navbarLinks" :key="index"><a :href="link.href">{{link.text}}</a></li>
       </ul>
@@ -64,7 +64,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/styles/partials/variables.scss';
 header{
-  background-color: aquamarine;
+  background-color: fff;
 }
 
 .header {

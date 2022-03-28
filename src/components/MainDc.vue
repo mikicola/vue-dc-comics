@@ -3,7 +3,7 @@
   <section id="jumbotron">
     <img src="../assets/img/jumbotron.jpg" alt="DC Comics banner personaggi">
   </section>
-  <section id="comics" class="flex">
+  <section id="comics">
     <h2>current series</h2>
       <div class="container flex">
         <CardComics v-for="comic in arrComics"
@@ -123,13 +123,20 @@ export default {
     }
     #comics{
       // background-color: $dark-bg-color;
-      flex-wrap: wrap;
+        h2{
+          background: $blue-dc-color;
+          padding: .7rem .5rem;
+          display: inline-block;
+        }
       .container{
         flex-wrap: wrap;
       }
     }
     span{
-      display: block;
+      background: $blue-dc-color;
+      padding: .7rem .5rem;
+      display: inline-block;
+      margin: 0 auto;
       text-align: center;
     }
   }

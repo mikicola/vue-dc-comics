@@ -3,13 +3,17 @@
   <section id="jumbotron">
     <img src="../assets/img/jumbotron.jpg" alt="DC Comics banner personaggi">
   </section>
-  <div class="container">
-    <CardComics v-for="comic in arrComics"
-    :key="comic.series"
-    :card-thumb="comic.thumb"
-    :card-series="comic.series" />
-  </div>
-   <!-- THUMB link immagine -->
+  <section id="comics" class="flex">
+    <h2>current series</h2>
+      <div class="container flex">
+        <CardComics v-for="comic in arrComics"
+        :key="comic.series"
+        :card-thumb="comic.thumb"
+        :card-series="comic.series" />
+      </div>
+  </section>
+      <span>load more</span>
+   <!-- THUMB è link immagine -->
 </main>
 
 </template>
@@ -104,13 +108,29 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../assets/styles/partials/variables.scss';
+  main{
+    color: #fff;
+    text-transform: uppercase;
     #jumbotron {
       height: 250px;
       overflow: hidden;
-    img {
-      background-repeat: no-repeat;
-      background-size: auto;
-      width: 100%;
+      img {
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 100%;
+      }
+    }
+    #comics{
+      // background-color: $dark-bg-color;
+      flex-wrap: wrap;
+      .container{
+        flex-wrap: wrap;
+      }
+    }
+    span{
+      display: block;
+      text-align: center;
     }
   }
 </style>

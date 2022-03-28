@@ -64,7 +64,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/styles/partials/variables.scss';
 header{
-  background-color: fff;
+  background-color: #fff;
 }
 
 .header {

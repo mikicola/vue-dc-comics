@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="card-container">
+    <div class="img-container">
     <img :src="cardThumb" :alt="cardSeries">
-    <h2>{{cardSeries}}</h2>
+    </div>
+    <h2 class="title-thumb">{{cardSeries}}</h2>
   </div>
 </template>
 
@@ -16,6 +18,28 @@ export default {
 }
 </script>
 
-<style>
-
+<style  scoped lang="scss">
+.card-container{
+  padding: 2rem 1rem;
+}
+.img-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    img {
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 100%;
+    }
+  }
+  // .img-comics{
+  //   object-fit: cover;
+  //   width: 100px;
+  //   height: 100px;
+  // }
+  .title-thumb{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 1rem;
+  }
 </style>
